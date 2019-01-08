@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { 
+		NativeModules,
 		Text, 
 		TouchableWithoutFeedback, 
 		View,
@@ -9,8 +10,12 @@ import { connect } from 'react-redux';
 import { CardSection } from './common';
 import * as actions from '../actions';
 
+const { UIManager } = NativeModules;
+
+UIManager.setLayoutAnimationEnabledExperimental(true);
+
 class ListItem extends Component {
-	componentWillReceiveProps() {
+	componentWillUpdate() {
 		LayoutAnimation.spring();
 	}
 
