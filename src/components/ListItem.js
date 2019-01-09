@@ -25,7 +25,7 @@ class ListItem extends Component {
 		if (expanded) {
 			return (
 				<CardSection>
-					<Text style={{ flex: 1 }}>
+					<Text style={{ flex: 1, paddingLeft: 15 }}>
 						{library.item.description}
 					</Text>
 				</CardSection>
